@@ -98,7 +98,7 @@ disabled = false
 
 [git_status]
 # NOTE-0: the missing space from `git_commit` is at the start here
-format = ' [\[$all_status$ahead_behind\]]($style) '
+format = ' ([\[$all_status$ahead_behind\]]($style) )'
 conflicted = "≠"
 
 [hostname]
