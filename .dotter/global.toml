@@ -6,3 +6,6 @@ depends = []
 [default.files]
 
 [default.variables]
+
+[starship.files]
+"starship.toml" = "~/.config/starship.toml"
