@@ -1,11 +1,9 @@
 [helpers]
 
-[default]
-depends = []
+[starship.files.'starship.toml']
+target = "~/.config/starship.toml"
+type = "symbolic"
 
-[default.files]
-
-[default.variables]
-
-[starship.files]
-"starship.toml" = "~/.config/starship.toml"
+[zsh.files.zshrc]
+target = "~/.zshrc"
+type = "template"
