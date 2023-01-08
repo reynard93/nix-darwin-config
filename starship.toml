@@ -1,106 +1,49 @@
-# this config is loosely based on powerlevel10k's pure style
-add_newline = true
+"$schema" = "https://starship.rs/config-schema.json"
+add_newline = false
 
-format = """\
+format = """$username\
 $hostname\
 $directory\
-$vcsh\
 $git_branch\
 $git_state\
 $git_status\
-$git_metrics\
-$hg_branch\
-$docker_context\
-$package\
-$cmake\
-$cobol\
-$dart\
-$deno\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
-$golang\
-$helm\
-$java\
-$julia\
-$kotlin\
-$lua\
-$nim\
-$nodejs\
-$ocaml\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$rlang\
-$red\
-$ruby\
-$rust\
-$scala\
-$swift\
-$terraform\
-$vlang\
-$vagrant\
-$zig\
-$nix_shell\
-$conda\
-$memory_usage\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-$env_var\
-$crystal\
-\
-$line_break\
-$sudo\
 $cmd_duration\
-$jobs\
-$status\
-$shell\
+$line_break\
+$python\
 $character"""
-right_format = "$time"
+
+[directory]
+style = "blue"
 
 [character]
 success_symbol = "[❯](purple)"
 error_symbol = "[❯](red)"
-vicmd_symbol = "[❮](red)"
-
-[cmd_duration]
-min_time = 1_000 # ms
-format = "[$duration]($style) "
-show_notifications = true
-# min_time_to_notify = 45_000 # ms
-
-[directory]
-truncate_to_repo = false
-style = "bold 27"
+vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-style = "bold bright-black"
 format = "[$branch]($style)"
-only_attached = true
-
-[git_commit]
-# NOTE-0: I'm leaving the space out at the end so eg `git_state` doesn't have a
-# space before the `|`.
-format = '[\($hash\)]($style)'
-style = "bold red"
-
-[git_state]
-# TODO: progress style? style for different states?
-format = '|[$state\($progress_current/$progress_total\)]($style) '
-
-[git_metrics]
-format = '([+$added]($added_style))([-$deleted]($deleted_style)) '
-disabled = false
+style = "bright-black"
 
 [git_status]
-# NOTE-0: the missing space from `git_commit` is at the start here
-format = ' ([\[$all_status$ahead_behind\]]($style) )'
-conflicted = "≠"
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
 
-[hostname]
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
 

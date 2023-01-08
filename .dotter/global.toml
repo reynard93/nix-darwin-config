@@ -1,9 +1,17 @@
 [helpers]
 
-[starship.files.'starship.toml']
-target = "~/.config/starship.toml"
-type = "symbolic"
+[editorconfig.files]
+editorconfig = "~/.editorconfig"
 
-[zsh.files.zshrc]
-target = "~/.zshrc"
-type = "template"
+[homebrew]
+
+[starship.files]
+"starship.toml" = "~/.config/starship.toml"
+
+[zsh]
+depends = ["starship"]
+
+[zsh.files]
+zprofile = { target = "~/.zprofile", type = "template" }
+zshenv = "~/.zshenv"
+zshrc = "~/.zshrc"
