@@ -8,7 +8,6 @@ unsetopt nomatch # `setopt extended_glob` already enabled but causes `HEAD^` in
 
 # print empty line after every command
 # https://github.com/starship/starship/issues/560#issuecomment-1318462079
-precmd() { echo "" }
 
 # set vim keybinds
 bindkey -v
