@@ -30,16 +30,18 @@ zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 13
 
 plugins=(
-	"deno"
-	"direnv"
-	"fnm"
-	"gh"
-	"git"
-	"golang"
-	"man"
-	"ripgrep"
-	"rust"
-	"vi-mode"
+	'deno'
+	'direnv'
+	'fnm'
+	'gh'
+	'git'
+	'golang'
+	'man'
+	'ripgrep'
+	'rust'
+	'vi-mode'
+	'zsh-autosuggestions'
+	'zsh-syntax-highlighting'
 )
 
 [[ -f "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
