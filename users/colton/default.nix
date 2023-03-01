@@ -41,7 +41,9 @@
 			];
 
 			sessionVariables = {
-				MANPAGER = "sh -c 'col -bx | bat -l man -p'";
+				EDITOR = "${pkgs.neovim-unwrapped}/bin/nvim";
+
+				MANPAGER = "sh -c 'col -bx | ${pkgs.bat}/bin/bat -l man -p'";
 
 				PAGER = "${pkgs.bat}/bin/bat";
 			};
