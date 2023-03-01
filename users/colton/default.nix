@@ -43,17 +43,17 @@
 			sessionVariables = {
 				MANPAGER = "sh -c 'col -bx | bat -l man -p'";
 
-				PAGER = "bat";
+				PAGER = "${pkgs.bat}/bin/bat";
 			};
 
 			shellAliases = {
 				k = "clear";
 				kn = "clear && printf '\\e[3J'";
 
-				ls = "lsd -A --group-directories-first --hyperlink auto";
-				l = "ls";
-				la = "ls -a";
-				ll = "ls -l";
+				ls = "${pkgs.lsd}/bin/lsd -A --group-directories-first --hyperlink auto";
+				l = "${pkgs.lsd}/bin/lsd";
+				la = "${pkgs.lsd}/bin/lsd -a";
+				ll = "${pkgs.lsd}/bin/lsd -l";
 
 				tree = "lsd -L --tree";
 			};
