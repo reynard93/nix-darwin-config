@@ -60,5 +60,10 @@
 		};
 
 		programs.command-not-found.enable = true;
+		programs.nix-index = {
+			enable = true;
+			enableBashIntegration = true;
+			enableZshIntegration = true;
+		};
 	};
 }

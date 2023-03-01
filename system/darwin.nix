@@ -25,8 +25,6 @@ inputs.darwin.lib.darwinSystem {
 		{
 			home-manager = hm-config;
 
-			programs.nix-index.enable = true;
-
 			services.nix-daemon.enable = true;
 
 			system.defaults = {
