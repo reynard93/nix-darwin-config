@@ -1,12 +1,13 @@
-{
+{ pkgs, ... }: {
 	programs.skim = {
 		enable = true;
+		enableBashIntegration = true;
 		enableZshIntegration = true;
 
-		defaultCommand = "fd --type f || find .";
+		defaultCommand = "${pkgs.fd}/bin/fd --type f || find .";
 		defaultOptions = [
 			"--preview"
-			"bat --color=always --style=numbers --line-range=:500 {}"
+			"${pkgs.bat}/bin/bat --color=always --line-range=:500 {}"
 		];
 	};
 }
