@@ -1,20 +1,16 @@
 { pkgs, ... }: {
 	programs.zsh = {
 		enable = true;
+		enableAutosuggestions = true;
+		enableSyntaxHighlighting = true;
 
 		autocd = false;
 
 		defaultKeymap = "viins";
 
-		enableAutosuggestions = true;
-		enableSyntaxHighlighting = true;
-
-		# profileExtra = ''
-		# 	# because i'm sick of setting this every time i run darwin-rebuild
-		# 	export NIXPKGS_ALLOW_UNFREE=1
-		# 	# export PAGER="bat "
-		# 	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-		# '';
+		history = {
+			expireDuplicatesFirst = true;
+		};
 
 		oh-my-zsh = {
 			enable = true;
