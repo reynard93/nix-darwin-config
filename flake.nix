@@ -23,14 +23,11 @@
 
 				system = "aarch64-darwin";
 
-				modules = [
-					./users/colton
-				];
-
 				hm-config.users.colton = {
 					home.username = "colton";
 
 					programs.alacritty.enable = true;
+					programs.vscode.enable = true;
 				};
 			};
 		};

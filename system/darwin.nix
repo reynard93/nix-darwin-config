@@ -20,6 +20,7 @@ inputs.darwin.lib.darwinSystem {
 		inputs.home-manager.darwinModules.home-manager
 
 		./common.nix
+		../users/colton
 
 		{
 			home-manager = hm-config;
