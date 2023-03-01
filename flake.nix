@@ -34,7 +34,7 @@
 			replit-mbp = import ./system/darwin.nix {
 				inherit inputs;
 
-				system = "aaarch64-darwin";
+				system = "aarch64-darwin";
 
 				hm-config.users.colton = {
 					home.username = "colton";
