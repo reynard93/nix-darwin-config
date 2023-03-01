@@ -30,6 +30,19 @@
 					programs.vscode.enable = true;
 				};
 			};
+
+			replit-mbp = import ./system/darwin.nix {
+				inherit inputs;
+
+				system = "aaarch64-darwin";
+
+				hm-config.users.colton = {
+					home.username = "colton";
+
+					programs.alacritty.enable = true;
+					programs.vscode.enable = true;
+				};
+			};
 		};
 	};
 }
