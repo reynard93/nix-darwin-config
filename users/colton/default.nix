@@ -55,7 +55,7 @@
 				la = "${pkgs.lsd}/bin/lsd -a";
 				ll = "${pkgs.lsd}/bin/lsd -l";
 
-				tree = "lsd -L --tree";
+				tree = "${pkgs.lsd}/bin/lsd -L --tree";
 			};
 		};
 
