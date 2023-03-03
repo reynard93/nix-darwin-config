@@ -1,5 +1,7 @@
-{ pkgs, ... }: let
-	inherit (pkgs.vscode-utils) buildVscodeMarketplaceExtension;
+{ lib, pkgs, ... }: let
+	# inherit (pkgs.vscode-utils)
+	# 	buildVscodeMarketplaceExtension
+	# 	extensionsFromVscodeMarketplace;
 
 	# credit: https://github.com/reckenrode/nixos-configs/blob/main/hosts/aarch64-darwin/natalia/users/reckenrode/home-manager/vscode.nix
 	# Work around the lack of extension ordering in VS Code
@@ -9,423 +11,12 @@
 
 	# 	preInstall = ''
 	# 		${old.preInstall or ""}
-	# 		${pkgs.jq}/bin/jq
-	# 			'.extensionDependencies |= . + $deps'
-	# 			--argjson deps ${lib.escapeShellArg (builtins.toJSON deps)}
+	# 		${pkgs.jq}/bin/jq \
+	# 			'.extensionDependencies |= . + $deps' \
+	# 			--argjson deps ${lib.escapeShellArg (builtins.toJSON deps)} \
 	# 			package.json > package.json
 	# 	'';
 	# });
-
-	# Bazel
-	BazelBuild.vscode-bazel = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "BazelBuild";
-			name = "vscode-bazel";
-		};
-	};
-
-	# Better C++ Syntax
-	jeff-hykin.better-cpp-syntax = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "jeff-hykin";
-			name = "better-cpp-syntax";
-		};
-	};
-
-	# CMake
-	twxs.cmake = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "twxs";
-			name = "cmake";
-		};
-	};
-
-	# CMake Tools
-	ms-vscode.cmake-tools = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ms-vscode";
-			name = "cmake-tools";
-		};
-	};
-
-	# CodeLLDB
-	# TODO: loadAfter
-	vadimcn.vscode-lldb = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "vadimcn";
-			name = "vscode-lldb";
-		};
-	};
-
-	# Community Material Theme
-	equinusocio.vsc-community-material-theme = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "Equinusocio";
-			name = "vsc-community-material-theme";
-		};
-	};
-
-	# crates
-	# TODO: loadAfter
-	serayuzgur.crates = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "serayuzgur";
-			name = "crates";
-		};
-	};
-
-	# Cypher Query Language
-	jakeboone02.cypher-query-language = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "jakeboone02";
-			name = "cypher-query-language";
-		};
-	};
-
-	# direnv
-	g3rry.direnv = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "g3rry";
-			name = "direnv";
-		};
-	};
-
-	# EditorConfig for VS Code
-	EditorConfig.EditorConfig = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "EditorConfig";
-			name = "EditorConfig";
-		};
-	};
-
-	# Error Lens
-	usernamehw.errorlens = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "usernamehw";
-			name = "errorlens";
-		};
-	};
-
-	# ESLint
-	# TODO: loadAfter?
-	dbaeumer.vscode-eslint = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "dbaeumer";
-			name = "vscode-eslint";
-		};
-	};
-
-	# Even Better TOML
-	tamasfe.even-better-toml = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "tamasfe";
-			name = "even-better-toml";
-		};
-	};
-
-	# fzf fuzzy quick open
-	rlivings39.fzf-quick-open = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "rlivings39";
-			name = "fzf-quick-open";
-		};
-	};
-
-	# GitHub Copilot
-	GitHub.copilot = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "GitHub";
-			name = "copilot";
-		};
-	};
-
-	# GitHub Copilot Labs
-	GitHub.copilot-labs = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "GitHub";
-			name = "copilot-labs";
-		};
-	};
-
-	# GitHub Pull Requests and Issues
-	GitHub.vscode-pull-request-github = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "GitHub";
-			name = "vscode-pull-request-github";
-		};
-	};
-
-	# GitLens
-	eamodio.gitlens = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "eamodio";
-			name = "gitlens";
-		};
-	};
-
-	# Go
-	golang.go = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "golang";
-			name = "go";
-		};
-	};
-
-	# GraphQL: Language Feature Support
-	# TODO: loadAfter?
-	GraphQL.vscode-graphql = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "GraphQL";
-			name = "vscode-graphql";
-		};
-	};
-
-	# GraphQL: Syntax Highlighting
-	GraphQL.vscode-graphql-syntax = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "GraphQL";
-			name = "vscode-graphql-syntax";
-		};
-	};
-
-	# Live Share
-	ms-vsliveshare.vsliveshare = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ms-vsliveshare";
-			name = "vsliveshare";
-		};
-	};
-
-	# Makefile Tools
-	ms-vscode.makefile-tools = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ms-vscode";
-			name = "makefile-tools";
-		};
-	};
-
-	# markdownlint
-	DavidAnson.vscode-markdownlint = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "DavidAnson";
-			name = "vscode-markdownlint";
-		};
-	};
-
-	# Material Theme Icons
-	equinusocio.vsc-material-theme-icons = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "Equinusocio";
-			name = "vsc-material-theme-icons";
-		};
-	};
-
-	# Nix
-	bbenoist.Nix = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "bbenoist";
-			name = "Nix";
-		};
-	};
-
-	# Nix IDE
-	# TODO: loadAfter? or use my own lsp pref?
-	jnoortheen.nix-ide = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "jnoortheen";
-			name = "nix-ide";
-		};
-	};
-
-	# npm Intellisense
-	# TODO: loadAfter?
-	christian-kohler.npm-intellisense = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "christian-kohler";
-			name = "npm-intellisense";
-		};
-	};
-
-	# OCaml Platform
-	# TODO: loadAfter
-	ocamllabs.ocaml-platform = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ocamllabs";
-			name = "ocaml-platform";
-		};
-	};
-
-	# pest
-	xoronic.pestfile = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "xoronic";
-			name = "pestfile";
-		};
-	};
-
-	# Polacode
-	pnp.polacode = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "pnp";
-			name = "polacode";
-		};
-	};
-
-	# Prettier - Code formatter
-	# TODO: loadAfter
-	esbenp.prettier-vscode = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "esbenp";
-			name = "prettier-vscode";
-		};
-	};
-
-	# Protobuf support
-	peterj.proto = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "peterj";
-			name = "proto";
-		};
-	};
-
-	# Red Hat Commons
-	redhat.vscode-commons = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "redhat";
-			name = "vscode-commons";
-		};
-	};
-
-	# Remote - SSH
-	ms-vscode-remote.remote-ssh = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ms-vscode-remote";
-			name = "remote-ssh";
-		};
-	};
-
-	# Remote - SSH: Editing Configuration Files
-	ms-vscode-remote.remote-ssh-edit = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ms-vscode-remote";
-			name = "remote-ssh-edit";
-		};
-	};
-
-	# Remote - Tunnels
-	ms-vscode.remote-server = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ms-vscode";
-			name = "remote-server";
-		};
-	};
-
-	# Remote Development
-	ms-vscode-remote.vscode-remote-extensionpack = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ms-vscode-remote";
-			name = "vscode-remote-extensionpack";
-		};
-	};
-
-	# Remote Explorer
-	ms-vscode.remote-explorer = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "ms-vscode";
-			name = "remote-explorer";
-		};
-	};
-
-	# Remote Server Protocol UI
-	redhat.vscode-rsp-ui = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "redhat";
-			name = "vscode-rsp-ui";
-		};
-	};
-
-	# Rewrap
-	stkb.rewrap = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "stkb";
-			name = "rewrap";
-		};
-	};
-
-	# rust-analyzer
-	# TODO: loadAfter
-	rust-lang.rust-analyzer = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "rust-lang";
-			name = "rust-analyzer";
-		};
-	};
-
-	# styled-jsx
-	# TODO: loadAfter?
-	blanu.vscode-styled-jsx = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "blanu";
-			name = "vscode-styled-jsx";
-		};
-	};
-
-	# TODO Highlight
-	wayou.vscode-todo-highlight = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "wayou";
-			name = "vscode-todo-highlight";
-		};
-	};
-
-	# Toggle Quotes
-	BriteSnow.vscode-toggle-quotes = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "BriteSnow";
-			name = "vscode-toggle-quotes";
-		};
-	};
-
-	# Vim
-	vscodevim.vim = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "vscodevim";
-			name = "vim";
-		};
-	};
-
-	# vsc-nvm
-	henrynguyen5-vsc.vsc-nvm = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "henrynguyen5-vsc";
-			name = "vsc-nvm";
-		};
-	};
-
-	# vscode-proto3
-	# TODO: loadAfter?
-	zxh404.vscode-proto3 = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "zxh404";
-			name = "vscode-proto3";
-		};
-	};
-
-	# XML
-	redhat.vscode-xml = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "redhat";
-			name = "vscode-xml";
-		};
-	};
-
-	# YAML
-	redhat.vscode-yaml = buildVscodeMarketplaceExtension {
-		mktplcRef = {
-			publisher = "redhat";
-			name = "vscode-yaml";
-		};
-	};
 in {
 	programs.vscode = {
 		# enableExtensionUpdateCheck = true;
@@ -434,7 +25,305 @@ in {
 		# my config should work when headless
 		package = pkgs.vscode;
 
-		# extensions = [
-		# ];
+		# extensions = (with pkgs.vscode-extensions; [
+		# 		davidanson.vscode-markdownlint
+
+		# 		eamodio.gitlens
+		# 		editorconfig.editorconfig
+
+		# 		github.copilot
+		# 		github.vscode-pull-request-github
+		# 		graphql.vscode-graphql
+
+		# 		jnoortheen.nix-ide
+
+		# 		mkhl.direnv
+		# 		ms-vscode.makefile-tools
+		# 		ms-vscode-remote.remote-ssh
+
+		# 		pkief.material-icon-theme
+
+		# 		redhat.vscode-xml
+		# 		redhat.vscode-yaml
+
+		# 		stkb.rewrap
+
+		# 		tamasfe.even-better-toml
+
+		# 		usernamehw.errorlens
+
+		# 		vscodevim.vim
+		# 	]) ++ extensionsFromVscodeMarketplace [
+		# 		{
+		# 			publisher = "blanu";
+		# 			name = "vscode-styled-jsx";
+		# 			version = "2.1.1";
+		# 			sha256 = "sha256-rvRLui9ivE5+I4VZJbSsdbcqFnssYV3gkmMk2Yrn9MU=";
+		# 		}
+
+		# 		{
+		# 			publisher = "BriteSnow";
+		# 			name = "vscode-toggle-quotes";
+		# 			version = "0.3.6";
+		# 			sha256 = "sha256-Hn3Mk224ePAAnNtkhKMcCil/kTgbonweb1i884Q62rs=";
+		# 		}
+
+		# 		{
+		# 			publisher = "christian-kohler";
+		# 			name = "npm-intellisense";
+		# 			version = "1.4.4";
+		# 			sha256 = "sha256-RLni/Iz2ZIX8/17gArc90ycVU9wPhNBa32Pe47sdGr0=";
+		# 		}
+
+		# 		{
+		# 			publisher = "jeff-hykin";
+		# 			name = "better-cpp-syntax";
+		# 			version = "1.17.2";
+		# 			sha256 = "sha256-p3SKu9FbtuP6in2dSsr5a0aB5W+YNQ0kMgMJoDYrhcU=";
+		# 		}
+
+		# 		{
+		# 			publisher = "Equinusocio";
+		# 			name = "vsc-community-material-theme";
+		# 			version = "1.4.4";
+		# 			sha256 = "sha256-Pn1IcgpwknVyKSnqs9/ZF2w6D2zASlAI6maPnvIltAA=";
+		# 		}
+
+		# 		{
+		# 			publisher = "GitHub";
+		# 			name = "copilot-labs";
+		# 			version = "0.11.742";
+		# 			sha256 = "sha256-upcrA8GYDKE71PvCLaSTersNsjrErcNy6Ff9oTz+2Zo=";
+		# 		}
+
+		# 		{
+		# 			publisher = "jakeboone02";
+		# 			name = "cypher-query-language";
+		# 			version = "2.0.0";
+		# 			sha256 = "sha256-oNjXfW7ndWDsc4GWb8p9QwoXAmW2IVIyUwCxY1qTQSc=";
+		# 		}
+
+		# 		{
+		# 			publisher = "ms-vscode";
+		# 			name = "remote-explorer";
+		# 			version = "0.2.0";
+		# 			sha256 = "sha256-bNpzzsHVD4bIicFJCd+fWXTptsIH6OaWeZrOnZcKcxU=";
+		# 		}
+
+		# 		{
+		# 			publisher = "ms-vscode-remote";
+		# 			name = "remote-ssh-edit";
+		# 			version = "0.84.0";
+		# 			sha256 = "sha256-33jHWC8K0TWJG54m6FqnYEotKqNxkcd/D14TFz6dgmc=";
+		# 		}
+
+		# 		{
+		# 			publisher = "ms-vsliveshare";
+		# 			name = "vsliveshare";
+		# 			version = "1.0.5832";
+		# 			sha256 = "sha256-vGurC+9d63PGgyXEVtVqruSDsObDjShpoxHD7EswSuk=";
+		# 		}
+
+		# 		{
+		# 			publisher = "pnp";
+		# 			name = "polacode";
+		# 			version = "0.3.4";
+		# 			sha256 = "sha256-u06gIe86W2dX4a1dBK4m07/VQeQKWMCwzi9LmSWpLFE=";
+		# 		}
+
+		# 		{
+		# 			publisher = "redhat";
+		# 			name = "vscode-commons";
+		# 			version = "0.0.6";
+		# 			sha256 = "sha256-tqjGKrQ6fhjco7/sgh2jaJCpikXyzeCOkHM8nRekFq0=";
+		# 		}
+
+		# 		{
+		# 			publisher = "redhat";
+		# 			name = "vscode-rsp-ui";
+		# 			version = "0.23.13";
+		# 			sha256 = "sha256-yey/cgii9/woxMyw1iUF4mHwUgM62fmK4WJwdEBQlD4=";
+		# 		}
+
+		# 		{
+		# 			publisher = "rlivings39";
+		# 			name = "fzf-quick-open";
+		# 			version = "0.5.0";
+		# 			sha256 = "sha256-172Vi4dlhE+Fu56OZs9Bs0Ii9Xt5dLFO3SpRO9dwJks=";
+		# 		}
+
+		# 		{
+		# 			publisher = "wayou";
+		# 			name = "vscode-todo-highlight";
+		# 			version = "1.0.5";
+		# 			sha256 = "sha256-CQVtMdt/fZcNIbH/KybJixnLqCsz5iF1U0k+GfL65Ok=";
+		# 		}
+
+		# 		{
+		# 			publisher = "xoronic";
+		# 			name = "pestfile";
+		# 			version = "0.4.0";
+		# 			sha256 = "sha256-m4ap8QBV38RlLUqvolicPuc3hTjjN91gtLj6uFFjifg=";
+		# 		}
+		# 	] ++ map (loadAfter [ "mkhl.direnv" ]) (with pkgs.vscode-extensions; [
+		# 		# need node
+		# 		dbaeumer.vscode-eslint
+
+		# 		# need node, prettier
+		# 		esbenp.prettier-vscode
+
+		# 		# need go
+		# 		golang.go
+
+		# 		# need dune, ocaml, opam
+		# 		ocamllabs.ocaml-platform
+
+		# 		# need cargo, rustc
+		# 		rust-lang.rust-analyzer
+
+		# 		# need cargo
+		# 		serayuzgur.crates
+
+		# 		# need cmake
+		# 		twxs.cmake
+
+		# 		# need lldb
+		# 		# TODO(vscode-lldb): https://github.com/NixOS/nixpkgs/pull/211321
+		# 		# vadimcn.vscode-lldb.overrideAttrs (old: old // {
+		# 		# 	preBuild = ''
+		# 		# 		export HOME=$TMPDIR
+		# 		# 		${old.prebuild}
+		# 		# 	'';
+		# 		# })
+
+		# 		# need protoc
+		# 		zxh404.vscode-proto3
+		# 	]) ++ [
+		# 		(loadAfter
+		# 			[ "mkhl.direnv" "twxs.cmake" ]
+		# 			pkgs.vscode-extensions.ms-vscode.cmake-tools)
+		# 	];
+
+		# userSettings = {
+		# 	"[go]" = {
+		# 		"editor.insertSpaces" = false;
+		# 		"editor.formatOnSave" = true;
+		# 		"editor.codeActionsOnSave" = {
+		# 			"source.organizeImports" = true;
+		# 		};
+		# 	};
+
+		# 	"[markdown]" = {
+		# 		"editor.quickSuggestions" = {
+		# 			"comments" = "off";
+		# 			"strings" = "off";
+		# 			"other" = "off";
+		# 		};
+		# 		"editor.wordWrap" = "on";
+		# 	};
+
+		# 	"[python]" = {
+		# 		"editor.wordBasedSuggestions" = false;
+		# 	};
+
+		# 	"[toml]" = {
+		# 		"editor.defaultFormatter" = "tamasfe.even-better-toml";
+		# 	};
+
+		# 	"crates.errorDecorator" = "❗️";
+		# 	"crates.listPreReleases" = true;
+
+		# 	"diffEditor.renderSideBySide" = false;
+
+		# 	"editor.accessibilitySupport" = "off";
+		# 	"editor.bracketPairColorization.enabled" = true;
+		# 	"editor.cursorStyle" = "line";
+		# 	"editor.defaultFormatter" = "EditorConfig.EditorConfig";
+		# 	"editor.fontFamily" = "'FiraCode Nerd Font', monospace";
+		# 	"editor.fontLigatures" = true;
+		# 	"editor.fontSize" = 14;
+		# 	"editor.guides.bracketPairs" = "active";
+		# 	"editor.inlineSuggestions.enabled" = true;
+		# 	"editor.insertSpaces" = false;
+		# 	"editor.lineNumbers" = "relative";
+		# 	"editor.minimap.maxColumn" = 80;
+		# 	"editor.suggestSelection" = "first";
+		# 	"editor.tabSize" = 2;
+		# 	"editor.wordSeparators" = "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-";
+		# 	"editor.wordWrap" = "on";
+
+		# 	"errorlens.onSave" = true;
+
+		# 	# "files.associations" = {
+		# 	# 	"*.nix" = "nix";
+		# 	# };
+		# 	"files.autoSave" = "afterDelay";
+		# 	"files.eol" = "\n";
+
+		# 	"git.autofetch" = true;
+		# 	"git.ignoreMissingGitWarning" = true;
+
+		# 	"gitlens.advanced.messages" = {
+		# 		"suppressGitMissingWarning" = true;
+		# 	};
+
+		# 	"go.autocompleteUnimportedPackages" = true;
+		# 	"go.buildOnSave" = "workspace";
+		# 	"go.formatTool" = "goimports";
+		# 	"go.toolsManagement.autoUpdate" = true;
+
+		# 	"nix.enableLanguageServer" = true;
+
+		# 	"redhat.telemetry.enabled" = false;
+
+		# 	"remote.SSH.remotePlatform" = {};
+
+		# 	"rsp-ui.enableStartServerOnActivation" = [
+		# 		{
+		# 			"id" = "redhat.vscode-community-server-connector";
+		# 			"name" = "Community Server Connector";
+		# 			"startOnActivation" = true;
+		# 		}
+		# 	];
+
+		# 	"rust-analyzer.cargo.buildScripts.enable" = true;
+		# 	# TODO(vscode-lldb)
+		# 	# "rust-analyzer.debug.engine" = "vadimcn.vscode-lldb";
+		# 	"rust-analyzer.debug.openDebugPane" = true;
+		# 	# "rust-analyzer.diagnostics.disabled" = [
+		# 	# 	"unresolved-import"
+		# 	# 	"macro-error"
+		# 	# ];
+		# 	"rust-analyzer.imports.granularity.group" = "preserve";
+		# 	"rust-analyzer.imports.prefix" = "self";
+		# 	"rust-analyzer.procMacro.enable" = true;
+
+		# 	"terminal.integrated.commandsToSkipShell" = [ "language-julia.interrupt" ];
+		# 	"terminal.integrated.fontSize" = 14;
+		# 	"terminal.integrated.gpuAcceleration" = "canvas";
+		# 	"terminal.integrated.scrollback" = 100000;
+
+		# 	"typescript.updateImportsOnFileMove.enabled" = "always";
+
+		# 	"window.autoDetectHighContrast" = false;
+		# 	"window.dialogStyle" = "custom";
+		# 	"window.restoreFullscreen" = true;
+
+		# 	"workbench.colorTheme" = "Community Material Theme Darker High Contrast";
+		# 	"workbench.iconTheme" = "material-icon-theme";
+		# 	"workbench.startupEditor" = "none";
+
+		# 	"vim.camelCaseMotion.enable" = true;
+		# 	"vim.easymotion" = true;
+		# 	"vim.foldfix" = true;
+		# 	"vim.gdefault" = true;
+		# 	"vim.showMarksInGutter" = true;
+		# 	"vim.sneak" = true;
+		# 	"vim.sneakReplacesF" = true;
+		# 	"vim.sneakUseIgnorecaseAndSmartcase" = true;
+		# 	"vim.useCtrlKeys" = false;
+
+		# 	"zenMode.hideLineNumbers" = false;
+		# };
 	};
 }
