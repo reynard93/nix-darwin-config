@@ -1,7 +1,7 @@
-{
+{ inputs, ... }: {
 	home-manager = {
 		backupFileExtension = "bak";
-		useGlobalPkgs = true;
+		useGlobalPkgs = false;
 		useUserPackages = true;
 	};
 
