@@ -44,5 +44,17 @@
 				};
 			};
 		};
+
+		nixosConfigurations = {
+			coltons-replit-devvm-baby = import ./system/nixos.nix {
+				inherit inputs;
+
+				system = "x86_64-linux";
+
+				hm-config.users.colton = {
+					home.username = "colton";
+				};
+			};
+		};
 	};
 }
