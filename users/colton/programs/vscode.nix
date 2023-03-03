@@ -1,23 +1,27 @@
-{ lib, pkgs, ... }: let
-	# inherit (pkgs.vscode-utils)
-	# 	buildVscodeMarketplaceExtension
-	# 	extensionsFromVscodeMarketplace;
+{ lib, pkgs, ... }:
 
-	# credit: https://github.com/reckenrode/nixos-configs/blob/main/hosts/aarch64-darwin/natalia/users/reckenrode/home-manager/vscode.nix
-	# Work around the lack of extension ordering in VS Code
-	# See: https://github.com/Microsoft/vscode/issues/57481#issuecomment-910883638
-	# loadAfter = deps: pkg: pkg.overrideAttrs (old: {
-	# 	nativeBuildInputs = (old.nativeBuildInputs or []) ++ [ pkgs.jq ];
+# let
+# 	inherit (pkgs.vscode-utils)
+# 		buildVscodeMarketplaceExtension
+# 		extensionsFromVscodeMarketplace;
 
-	# 	preInstall = ''
-	# 		${old.preInstall or ""}
-	# 		${pkgs.jq}/bin/jq \
-	# 			'.extensionDependencies |= . + $deps' \
-	# 			--argjson deps ${lib.escapeShellArg (builtins.toJSON deps)} \
-	# 			package.json > package.json
-	# 	'';
-	# });
-in {
+# #	credit: https://github.com/reckenrode/nixos-configs/blob/main/hosts/aarch64-darwin/natalia/users/reckenrode/home-manager/vscode.nix
+# #	Work around the lack of extension ordering in VS Code
+# #	See: https://github.com/Microsoft/vscode/issues/57481#issuecomment-910883638
+# 	loadAfter = deps: pkg: pkg.overrideAttrs (old: {
+# 		nativeBuildInputs = (old.nativeBuildInputs or []) ++ [ pkgs.jq ];
+
+# 		preInstall = ''
+# 			${old.preInstall or ""}
+# 			${pkgs.jq}/bin/jq \
+# 				'.extensionDependencies |= . + $deps' \
+# 				--argjson deps ${lib.escapeShellArg (builtins.toJSON deps)} \
+# 				package.json > package.json
+# 		'';
+# 	});
+# in
+
+{
 	programs.vscode = {
 		# enableExtensionUpdateCheck = true;
 
