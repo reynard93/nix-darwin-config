@@ -20,8 +20,7 @@
 		};
 	};
 
-	outputs = inputs: let
-	in {
+	outputs = inputs: {
 		darwinConfigurations = {
 			donn-mbp = import ./system/darwin.nix {
 				inherit inputs;
