@@ -9,55 +9,46 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		flake-utils = {
+			url = "github:numtide/flake-utils";
+		};
+
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-
-		nil = {
-			url = "github:oxalica/nil";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
 	};
 
-	outputs = inputs: {
+	outputs = inputs @ {
+		flake-utils,
+		home-manager,
+		...
+	}: {
 		darwinConfigurations = {
-			donn-mbp = import ./system/darwin.nix {
+			donn-mbp = import ./system/darwin {
 				inherit inputs;
 
 				system = "aarch64-darwin";
 
-				hm-config.users.colton = {
-					home.username = "colton";
-
-					programs.alacritty.enable = true;
-					programs.vscode.enable = true;
-				};
+				modules = [
+					{
+						networking.computerName = "Colton’s MacBook Pro";
+						networking.hostName = "donn-mbp";
+					}
+				];
 			};
 
-			replit-mbp = import ./system/darwin.nix {
+			replit-mbp = import ./system/darwin {
 				inherit inputs;
 
 				system = "aarch64-darwin";
 
-				hm-config.users.colton = {
-					home.username = "colton";
-
-					programs.alacritty.enable = true;
-					programs.vscode.enable = true;
-				};
-			};
-		};
-
-		nixosConfigurations = {
-			coltons-replit-devvm-baby = import ./system/nixos.nix {
-				inherit inputs;
-
-				system = "x86_64-linux";
-
-				hm-config.users.colton = {
-					home.username = "colton";
-				};
+				modules = [
+					{
+						networking.computerName = "Colton’s Replit MacBook Pro";
+						networking.hostname = "donn-replit-mbp";
+					}
+				];
 			};
 		};
 	};
