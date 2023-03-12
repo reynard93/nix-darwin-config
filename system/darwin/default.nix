@@ -42,7 +42,7 @@ inputs.darwin.lib.darwinSystem {
 				enable = true;
 
 				# for some reason, i'm not getting this in my shell init.
-				shellInit = ''
+				loginShellInit = ''
 					if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
 						. '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
 					fi
