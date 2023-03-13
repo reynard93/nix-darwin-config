@@ -26,9 +26,9 @@ in {
 					pathsToLink = "/Applications";
 				};
 			in lib.hm.dag.entryAfter ["linkGeneration"] ''
-				app_path="$HOME/Applications/Home Manager Apps"
-				echo "Linking Home Manager applications from ${apps} to $app_path..." 2>&1
+				echo "Linking Home Manager applications..." 2>&1
 
+				app_path="$HOME/Applications/Home Manager Apps"
 				tmp_path="$(mktemp -dt "home-manager-applications.XXXXXXXXXX")" || exit 1
 
 				${pkgs.fd}/bin/fd \
