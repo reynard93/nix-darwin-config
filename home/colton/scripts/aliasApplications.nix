@@ -7,7 +7,7 @@
 	system,
 	...
 }: let
-	inherit (inputs) mkAlias;
+	mkalias = inputs.mkAlias.outputs.apps.${system}.default.program;
 in {
 	disabledModules = ["targets/darwin/linkapps.nix"];
 	# Add a custom mkalias based thing cribbed from:
@@ -33,7 +33,7 @@ in {
 
 				${pkgs.fd}/bin/fd \
 					-t l -d 1 . ${apps}/Applications \
-					-x $DRY_RUN_CMD ${mkAlias.outputs.apps.${system}.default.program} -L {} "$tmp_path/{/}"
+					-x $DRY_RUN_CMD ${mkalias} -L {} "$tmp_path/{/}"
 
 				$DRY_RUN_CMD rm -rf "$app_path"
 				$DRY_RUN_CMD mv "$tmp_path" "$app_path"
