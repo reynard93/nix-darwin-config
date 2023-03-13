@@ -26,7 +26,7 @@
 			kn = "clear && printf '\\e[3J'";
 
 			ls = "${pkgs.lsd}/bin/lsd -A --group-directories-first --hyperlink auto";
-			l = "${pkgs.lsd}/bin/lsd";
+			l = "${pkgs.lsd}/bin/lsd -L";
 			la = "${pkgs.lsd}/bin/lsd -a";
 			ll = "${pkgs.lsd}/bin/lsd -l";
 			lla = "${pkgs.lsd}/bin/lsd -al";

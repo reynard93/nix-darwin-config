@@ -20,18 +20,23 @@ inputs.darwin.lib.darwinSystem {
 
 		inputs.home-manager.darwinModules.home-manager
 		(args: {
-			home-manager.users.colton = import ../../home/colton (args // {
-				imports = [
-					{
-						home.sessionVariables = {
-							# This can be set in NixOS configuration.nix, but not for darwin
-							NIXPKGS_ALLOW_UNFREE = "1";
-						};
+			home-manager = {
+				extraSpecialArgs = {
+					inherit inputs system;
+				};
+				users.colton = import ../../home/colton (args // {
+					imports = [
+						{
+							home.sessionVariables = {
+								# This can be set in NixOS configuration.nix, but not for darwin
+								NIXPKGS_ALLOW_UNFREE = "1";
+							};
 
-						programs.vscode.enable = true;
-					}
-				];
-			});
+							programs.vscode.enable = true;
+						}
+					];
+				});
+			};
 		})
 
 		{

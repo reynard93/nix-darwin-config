@@ -1,6 +1,7 @@
 {
 	imports ? [],
 	inputs,
+	system,
 	...
 }:
 
@@ -25,6 +26,7 @@
 		./programs/zellij.nix
 		./programs/zoxide.nix
 		./programs/zsh.nix
-	];
 
+		./scripts/aliasApplications.nix
+	];
 }
