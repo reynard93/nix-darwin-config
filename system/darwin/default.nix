@@ -41,6 +41,13 @@ inputs.darwin.lib.darwinSystem {
 		})
 
 		{
+			nix.settings = {
+				auto-optimise-store = true;
+
+				experimental-features = "nix-command flakes";
+				extra-nix-path = "nixpkgs=flake:nixpkgs";
+			};
+
 			nixpkgs.config.allowUnfree = true;
 
 			programs.bash.enable = true;
