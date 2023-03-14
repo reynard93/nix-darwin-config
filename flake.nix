@@ -23,6 +23,7 @@
 	outputs = inputs @ {
 		flake-utils,
 		home-manager,
+		nixpkgs,
 		...
 	}: {
 		darwinConfigurations = {
@@ -51,6 +52,28 @@
 					}
 				];
 			};
+		};
+
+		homeConfigurations.replit-devvm = let
+			system = "x86_64-linux";
+			pkgs = import nixpkgs  {
+				inherit system;
+			};
+		in home-manager.lib.homeManagerConfiguration {
+			inherit pkgs;
+
+			extraSpecialArgs = {
+				inherit inputs system;
+			};
+
+			modules = [
+				(import ./home/colton {
+					inherit inputs system;
+				})
+				{
+					home.homeDirectory = "/home/colton";
+				}
+			];
 		};
 	};
 }

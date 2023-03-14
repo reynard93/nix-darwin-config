@@ -5,11 +5,17 @@
 	home = {
 		enableNixpkgsReleaseCheck = true;
 		stateVersion = "22.11";
+		username = "colton";
 
 		packages = with pkgs; [
+			du-dust
+			fd
 			jless
 			jq
 			nil
+			procs
+			ripgrep
+			sd
 			tokei
 		];
 

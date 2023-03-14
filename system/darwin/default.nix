@@ -26,6 +26,8 @@ inputs.darwin.lib.darwinSystem {
 				};
 				users.colton = import ../../home/colton (args // {
 					imports = [
+						./scripts/aliasApplications.nix
+
 						{
 							home.sessionVariables = {
 								# This can be set in NixOS configuration.nix, but not for darwin
