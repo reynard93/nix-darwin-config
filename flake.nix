@@ -47,7 +47,7 @@
 				modules = [
 					{
 						networking.computerName = "Colton’s Replit MacBook Pro";
-						networking.hostname = "donn-replit-mbp";
+						networking.hostName = "donn-replit-mbp";
 					}
 				];
 			};
