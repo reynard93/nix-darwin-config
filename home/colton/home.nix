@@ -7,6 +7,8 @@
 		stateVersion = "22.11";
 
 		packages = with pkgs; [
+			jless
+			jq
 			nil
 			tokei
 		];

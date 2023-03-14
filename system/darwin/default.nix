@@ -32,6 +32,7 @@ inputs.darwin.lib.darwinSystem {
 								NIXPKGS_ALLOW_UNFREE = "1";
 							};
 
+							programs.alacritty.enable = true;
 							programs.vscode.enable = true;
 						}
 					];

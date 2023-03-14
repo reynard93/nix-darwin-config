@@ -10,6 +10,7 @@
 		./editorconfig.nix
 		./home.nix
 
+		./programs/alacritty.nix
 		./programs/bash.nix
 		./programs/bat.nix
 		./programs/bottom.nix
