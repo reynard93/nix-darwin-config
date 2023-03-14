@@ -39,7 +39,7 @@
 				];
 			};
 
-			replit-mbp = import ./system/darwin {
+			donn-replit-mbp = import ./system/darwin {
 				inherit inputs;
 
 				system = "aarch64-darwin";
