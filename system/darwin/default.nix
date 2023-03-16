@@ -12,6 +12,8 @@ inputs.darwin.lib.darwinSystem {
 	};
 
 	modules = modules ++ [
+		../../cachix
+
 		./environment.nix
 		./fonts.nix
 		./system.nix
@@ -48,6 +50,8 @@ inputs.darwin.lib.darwinSystem {
 
 				experimental-features = "nix-command flakes";
 				extra-nix-path = "nixpkgs=flake:nixpkgs";
+
+				trusted-users = [ "root" "colton" ];
 			};
 
 			nixpkgs.config.allowUnfree = true;
