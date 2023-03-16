@@ -7,6 +7,8 @@
 
 		aliases = {
 			cam = "commit -am";
+			cm = "commit -m";
+
 			ignore = "update-index --assume-unchanged";
 			unignore = "update-index --no-assume-unchanged";
 		};
