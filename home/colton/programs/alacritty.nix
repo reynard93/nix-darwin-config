@@ -1,9 +1,9 @@
-{ config, ... }: let
+let
 	setMods = mods: builtins.map (binding:
 		binding // { inherit mods; }
 	);
 	ctrlOrCmd = (binds:
-		(setMods "Control" binds)
+		(setMods "Control|Shift" binds)
 		++ (setMods "Command" binds)
 	);
 in {
