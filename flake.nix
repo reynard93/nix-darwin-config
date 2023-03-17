@@ -15,7 +15,7 @@
 		};
 
 		mkAlias = {
-			url = "github:cdmistman/mkAlias";
+			url = "github:reckenrode/mkAlias";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
