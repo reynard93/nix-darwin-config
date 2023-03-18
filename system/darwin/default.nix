@@ -37,32 +37,14 @@ inputs.darwin.lib.darwinSystem {
 			home-manager.users.colton = import ../../home/colton;
 		}
 
-		# (args: {
-		# 	home-manager = {
-		# 		users.colton = import ../../home/colton (args // {
-		# 			imports = [
-		# 				./scripts/aliasApplications.nix
-
-		# 				{
-		# 					home.sessionVariables = {
-		# 						# This can be set in NixOS configuration.nix, but not for darwin
-		# 						NIXPKGS_ALLOW_UNFREE = "1";
-		# 					};
-
-		# 					programs.alacritty.enable = true;
-		# 					programs.vscode.enable = true;
-		# 				}
-		# 			];
-		# 		});
-		# 	};
-		# })
-
 		{
 			nix.settings = {
 				auto-optimise-store = true;
 
 				experimental-features = "nix-command flakes";
 				extra-nix-path = "nixpkgs=flake:nixpkgs";
+
+				sandbox = true;
 
 				trusted-users = [ "root" "colton" ];
 			};
