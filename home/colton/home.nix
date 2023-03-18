@@ -1,4 +1,5 @@
 {
+	enableGUI,
 	pkgs,
 	...
 }: {
@@ -8,7 +9,6 @@
 		username = "colton";
 
 		packages = with pkgs; [
-			discord
 			du-dust
 			fd
 			jless
@@ -18,7 +18,9 @@
 			ripgrep
 			sd
 			tokei
-		];
+		] ++ (if !enableGUI then [] else with pkgs; [
+			discord
+		]);
 
 		sessionPath = [
 			"$HOME/bin"
