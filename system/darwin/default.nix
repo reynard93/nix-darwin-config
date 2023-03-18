@@ -17,32 +17,45 @@ inputs.darwin.lib.darwinSystem {
 		./environment.nix
 		./fonts.nix
 		./system.nix
-		./users/admin.nix
+
+		./scripts/aliasApplications.nix
 		./users/colton.nix
+		./users/admin.nix
 
 		inputs.home-manager.darwinModules.home-manager
-		(args: {
-			home-manager = {
-				extraSpecialArgs = {
-					inherit inputs system;
-				};
-				users.colton = import ../../home/colton (args // {
-					imports = [
-						./scripts/aliasApplications.nix
+		{
+			home-manager.extraSpecialArgs = {
+				inherit inputs system;
 
-						{
-							home.sessionVariables = {
-								# This can be set in NixOS configuration.nix, but not for darwin
-								NIXPKGS_ALLOW_UNFREE = "1";
-							};
-
-							programs.alacritty.enable = true;
-							programs.vscode.enable = true;
-						}
-					];
-				});
+				enableGUI = true;
 			};
-		})
+
+			home-manager.sharedModules = [
+				../../home/common
+			];
+
+			home-manager.users.colton = import ../../home/colton;
+		}
+
+		# (args: {
+		# 	home-manager = {
+		# 		users.colton = import ../../home/colton (args // {
+		# 			imports = [
+		# 				./scripts/aliasApplications.nix
+
+		# 				{
+		# 					home.sessionVariables = {
+		# 						# This can be set in NixOS configuration.nix, but not for darwin
+		# 						NIXPKGS_ALLOW_UNFREE = "1";
+		# 					};
+
+		# 					programs.alacritty.enable = true;
+		# 					programs.vscode.enable = true;
+		# 				}
+		# 			];
+		# 		});
+		# 	};
+		# })
 
 		{
 			nix.settings = {

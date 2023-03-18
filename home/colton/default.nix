@@ -1,10 +1,5 @@
 {
-	imports ? [],
-	...
-}:
-
-{
-	imports = imports ++ [
+	imports = [
 		./editorconfig.nix
 		./home.nix
 

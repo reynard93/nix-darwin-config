@@ -33,13 +33,12 @@
 			k = "clear";
 			kn = "clear && printf '\\e[3J'";
 
-			ls = "${pkgs.lsd}/bin/lsd -A --group-directories-first --hyperlink auto";
-			l = "${pkgs.lsd}/bin/lsd -L";
-			la = "${pkgs.lsd}/bin/lsd -a";
-			ll = "${pkgs.lsd}/bin/lsd -l";
-			lla = "${pkgs.lsd}/bin/lsd -al";
-
-			tree = "${pkgs.lsd}/bin/lsd -L --tree";
+			ls = "${pkgs.lsd}/bin/lsd -AL --group-directories-first";
+			l = "ls";
+			la = "ls -a";
+			ll = "ls -l";
+			lla = "ls -al";
+			tree = "ls --tree";
 		};
 	};
 }

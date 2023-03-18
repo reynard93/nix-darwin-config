@@ -21,7 +21,6 @@
 	};
 
 	outputs = inputs @ {
-		flake-utils,
 		home-manager,
 		nixpkgs,
 		...
@@ -67,9 +66,7 @@
 			};
 
 			modules = [
-				(import ./home/colton {
-					inherit inputs system;
-				})
+				(import ./home/colton)
 				{
 					home.homeDirectory = "/home/colton";
 				}

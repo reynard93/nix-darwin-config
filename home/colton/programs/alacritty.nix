@@ -1,3 +1,8 @@
+{
+	enableGUI,
+	...
+}:
+
 let
 	setMods = mods: builtins.map (binding:
 		binding // { inherit mods; }
@@ -8,6 +13,8 @@ let
 	);
 in {
 	programs.alacritty = {
+		enable = enableGUI;
+
 		settings.live_config_reload = true;
 
 		settings.cursor = {
