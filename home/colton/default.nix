@@ -17,6 +17,7 @@
 		./programs/skim.nix
 		./programs/starship.nix
 		./programs/tealdeer.nix
+		./programs/vscode.nix
 		./programs/zellij.nix
 		./programs/zoxide.nix
 		./programs/zsh.nix
