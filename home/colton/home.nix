@@ -8,6 +8,7 @@
 		username = "colton";
 
 		packages = with pkgs; [
+			discord
 			du-dust
 			fd
 			jless
