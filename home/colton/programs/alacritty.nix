@@ -81,15 +81,6 @@ in {
 			{ mouse = "Middle"; Mode = "~Vi"; action = "PasteSelection"; }
 		]);
 
-		settings.shell = {
-			program = "/bin/zsh";
-			args = [
-				"--login"
-				"-c"
-				"zellij attach --index 0 || zellij --layout default"
-			];
-		};
-
 		settings.window = {
 			decorations = "full";
 			decorations_theme_variant = "None";
