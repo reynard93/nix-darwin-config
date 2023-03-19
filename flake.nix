@@ -2,12 +2,14 @@
 	description = "My (cdmistman/colton) Nix config";
 
 	inputs = {
-		nixpkgs.url = "/Users/colton/github.com/NixOS/nixpkgs";
+		nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
 		darwin = {
 			url = "github:LnL7/nix-darwin";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+
+		devenv.url = "github:cachix/devenv/latest";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";

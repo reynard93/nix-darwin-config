@@ -1,6 +1,8 @@
 {
 	enableGUI,
+	inputs,
 	pkgs,
+	system,
 	...
 }: {
 	home = {
@@ -9,6 +11,8 @@
 		username = "colton";
 
 		packages = with pkgs; [
+			inputs.devenv.packages.${system}.devenv
+
 			du-dust
 			fd
 			jless
