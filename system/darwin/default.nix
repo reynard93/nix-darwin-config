@@ -7,6 +7,8 @@
 inputs.darwin.lib.darwinSystem {
 	inherit system;
 
+	pkgs = inputs.nixpkgs.legacyPackages.${system};
+
 	specialArgs = {
 		inherit inputs system;
 	};
@@ -48,8 +50,6 @@ inputs.darwin.lib.darwinSystem {
 
 				trusted-users = [ "root" "colton" ];
 			};
-
-			nixpkgs.config.allowUnfree = true;
 
 			programs.bash.enable = true;
 			programs.zsh = {
