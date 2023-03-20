@@ -55,24 +55,23 @@
 			};
 		};
 
-		homeConfigurations.replit-devvm = let
-			system = "x86_64-linux";
-			pkgs = import nixpkgs  {
-				inherit system;
-			};
-		in home-manager.lib.homeManagerConfiguration {
-			inherit pkgs;
+		homeConfigurations.replit-devvm =
+			let
+				system = "x86_64-linux";
+				pkgs = nixpkgs.legacyPackages.${system};
+			in home-manager.lib.homeManagerConfiguration {
+				inherit pkgs;
 
-			extraSpecialArgs = {
-				inherit inputs system;
-			};
+				extraSpecialArgs = {
+					inherit inputs system;
+				};
 
-			modules = [
-				(import ./home/colton)
-				{
-					home.homeDirectory = "/home/colton";
-				}
-			];
-		};
+				modules = [
+					(import ./home/colton)
+					{
+						home.homeDirectory = "/home/colton";
+					}
+				];
+			};
 	};
 }
