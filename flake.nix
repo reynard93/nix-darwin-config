@@ -2,7 +2,7 @@
 	description = "My (cdmistman/colton) Nix config";
 
 	inputs = {
-		nixpkgs.url = "github:cdmistman/nixpkgs/discord";
+		nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
 		darwin = {
 			url = "github:LnL7/nix-darwin";
