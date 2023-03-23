@@ -2,6 +2,7 @@
 	imports = [
 		./editorconfig.nix
 		./home.nix
+		./nixpkgs.nix
 
 		./programs/alacritty.nix
 		./programs/bash.nix
