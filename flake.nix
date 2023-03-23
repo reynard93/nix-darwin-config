@@ -64,6 +64,8 @@
 
 				extraSpecialArgs = {
 					inherit inputs system;
+
+					enableGUI = false;
 				};
 
 				modules = [
