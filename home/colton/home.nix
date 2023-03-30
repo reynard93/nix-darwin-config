@@ -22,6 +22,8 @@
 			ripgrep
 			sd
 			tokei
+
+			nodePackages.graphite-cli
 		] ++ (if !enableGUI then [] else with pkgs; [
 			discord
 			element-desktop
