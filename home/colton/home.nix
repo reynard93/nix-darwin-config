@@ -13,6 +13,7 @@
 		packages = with pkgs; [
 			inputs.devenv.packages.${system}.devenv
 
+			docker
 			du-dust
 			fd
 			jless
