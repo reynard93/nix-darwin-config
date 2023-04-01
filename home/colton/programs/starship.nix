@@ -6,6 +6,8 @@
 
 		settings = {
 			add_newline = false;
+			command_timeout = 300;
+
 			format = "(\\[$username$hostname\\] )"
 				+ "$directory"
 				+ "$git_branch"
@@ -41,6 +43,8 @@
 			git_metrics = {
 				format = "([|](dimmed white)[+$added]($added_style)[-$deleted]($deleted_style))";
 				disabled = false;
+				# TODO: https://github.com/starship/starship/pull/5052
+				# ignore_submodules = true;
 			};
 			git_state = {
 				format = "\\([$state( $progress_current/$progress_total)]($style)\\) ";
@@ -56,6 +60,7 @@
 				renamed = "";
 				deleted = "";
 				stashed = "≡";
+				ignore_submodules = true;
 			};
 
 			hostname = {
