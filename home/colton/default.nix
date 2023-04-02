@@ -1,7 +1,7 @@
 {
 	imports = [
 		./editorconfig.nix
-		./home.nix
+		./home
 		./nixpkgs.nix
 
 		./programs/alacritty.nix

@@ -6,6 +6,8 @@
 	...
 }: {
 	home = {
+		file = import ./files.nix;
+
 		enableNixpkgsReleaseCheck = true;
 		stateVersion = "22.11";
 		username = "colton";
