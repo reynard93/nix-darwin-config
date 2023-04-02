@@ -15,6 +15,7 @@
 		./programs/lsd.nix
 		./programs/neovim.nix
 		./programs/nix-index.nix
+		./programs/nushell
 		./programs/skim.nix
 		./programs/starship.nix
 		./programs/tealdeer.nix
