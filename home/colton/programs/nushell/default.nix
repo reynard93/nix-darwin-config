@@ -4,5 +4,6 @@
 
 		configFile.source = ./config.nu;
 		envFile.source = ./env.nu;
+		loginFile.source = ./login.nu;
 	};
 }

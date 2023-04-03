@@ -53,3 +53,5 @@ def kn [] { clear; printf "\e[3J" }
 
 alias l = lsd -AL --group-directories-first
 alias tree = l --tree
+
+# let-env nu = ($nu)

@@ -1,8 +1,4 @@
 {
-	inputs,
-	pkgs,
-	...
-}: {
 	users.users.colton = {
 		createHome = false;
 
@@ -11,9 +7,5 @@
 		home = "/Users/colton";
 
 		isHidden = false;
-
-		packages = [
-			inputs.home-manager
-		];
 	};
 }

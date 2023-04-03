@@ -103,15 +103,16 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1680389554,
-        "narHash": "sha256-+8FUmS4GbDMynQErZGXKg+wU76rq6mI5fprxFXFWKSM=",
-        "owner": "nix-community",
+        "lastModified": 1680504486,
+        "narHash": "sha256-u9Bj3Sexn77VSz1yPXCx8EPJ6S9J6Q7aUc3O4mBvApQ=",
+        "owner": "cdmistman",
         "repo": "home-manager",
-        "rev": "ddd8866c0306c48f465e7f48432e6f1ecd1da7f8",
+        "rev": "f0c7516f2fff52e0efe39d408b852dc243363b88",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
+        "owner": "cdmistman",
+        "ref": "nushell-add-login-file",
         "repo": "home-manager",
         "type": "github"
       }
