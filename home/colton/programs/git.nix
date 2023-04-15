@@ -6,6 +6,7 @@
 		userName = "Colton Donnelly";
 
 		aliases = {
+			ca = "commit -a";
 			cam = "commit -am";
 			cm = "commit -m";
 
@@ -15,6 +16,7 @@
 
 		extraConfig = {
 			init.defaultBranch = "main";
+			pull.rebase = false;
 			push.autoSetupRemote = true;
 			url."ssh://git@github.com".insteadOf = "github";
 		};
