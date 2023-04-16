@@ -6,8 +6,9 @@
 		userName = "Colton Donnelly";
 
 		aliases = {
-			ca = "commit -a";
-			cam = "commit -am";
+			c = "commit";
+			ca = "!git add -A && git commit";
+			cam = "!git add -A && git commit -m";
 			cm = "commit -m";
 
 			ignore = "update-index --assume-unchanged";
@@ -16,8 +17,10 @@
 
 		extraConfig = {
 			init.defaultBranch = "main";
+
 			pull.rebase = false;
 			push.autoSetupRemote = true;
+
 			url."ssh://git@github.com".insteadOf = "github";
 		};
 	};
