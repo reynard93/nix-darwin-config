@@ -21,7 +21,7 @@ inputs.darwin.lib.darwinSystem {
 		./system.nix
 
 		./scripts/aliasApplications.nix
-		./users/colton.nix
+		./users/reynardlee.nix
 		./users/admin.nix
 
 		inputs.home-manager.darwinModules.home-manager
@@ -36,7 +36,7 @@ inputs.darwin.lib.darwinSystem {
 				../../home/common
 			];
 
-			home-manager.users.colton = import ../../home/colton;
+			home-manager.users.reynardlee = import ../../home/reynardlee;
 		}
 
 		{
@@ -48,7 +48,7 @@ inputs.darwin.lib.darwinSystem {
 
 				sandbox = true;
 
-				trusted-users = [ "root" "colton" ];
+				trusted-users = [ "root" "reynardlee" ];
 			};
 
 			programs.bash.enable = true;
