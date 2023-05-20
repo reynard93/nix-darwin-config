@@ -10,7 +10,7 @@
 
 		enableNixpkgsReleaseCheck = true;
 		stateVersion = "22.11";
-		username = "colton";
+		username = "reynardlee";
 
 		packages = with pkgs; [
 			inputs.devenv.packages.${system}.devenv
