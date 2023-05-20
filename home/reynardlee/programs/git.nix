@@ -2,8 +2,8 @@
 	programs.git = {
 		enable = true;
 
-		userEmail = "colton@donn.io";
-		userName = "Colton Donnelly";
+		userEmail = "yylee.rey@gmail.com";
+		userName = "reylee";
 
 		aliases = {
 			c = "commit";
