@@ -38,7 +38,7 @@
 
 				modules = [
 					{
-						networking.computerName = "Reynard Lee's MacBook Pro";
+						networking.computerName = "ReynardLee MacBook Pro";
 						networking.hostName = "r-lee-QH0KG";
 					}
 				];
