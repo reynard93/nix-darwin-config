@@ -31,7 +31,7 @@
 		...
 	}: {
 		darwinConfigurations = {
-			donn-mbp = import ./system/darwin {
+			r-lee-QH0KG = import ./system/darwin {
 				inherit inputs;
 
 				system = "aarch64-darwin";
