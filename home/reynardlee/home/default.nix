@@ -30,6 +30,7 @@
 		] ++ (if !enableGUI then [] else with pkgs; [
 			discord
 			element-desktop
+#			telegram
 		]);
 
 		sessionPath = [
@@ -38,7 +39,6 @@
 
 		sessionVariables = {
 			MANPAGER = "sh -c 'col -bx | ${pkgs.bat}/bin/bat -l man -p'";
-
 			PAGER = "${pkgs.bat}/bin/bat";
 		};
 
@@ -52,6 +52,9 @@
 			ll = "ls -l";
 			lla = "ls -al";
 			tree = "ls --tree";
+			ownsh= "cd /Users/reynardlee/bin";
+			gcm = "git commit -m";
+			ga = "git add .";
 		};
 	};
 }

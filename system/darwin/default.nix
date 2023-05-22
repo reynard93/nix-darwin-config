@@ -67,6 +67,8 @@ inputs.darwin.lib.darwinSystem {
 			security.pam.enableSudoTouchIdAuth = true;
 
 			services.nix-daemon.enable = true;
+			#	https://github.com/koekeishiya/skhd/issues/267
+			services.activate-system.enable = true; # this might be the launchd thing reqd for yabai/skhd etc to run
 		}
 	];
 }

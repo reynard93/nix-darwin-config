@@ -33,6 +33,7 @@
         restart_service = true;
       }
     ];
+    # i don't know why this doesnt work
     casks = [
       # multimedia
       # "spotify"
@@ -43,7 +44,7 @@
       # "tor-browser"
 
       # social
-      "telegram"
+			# "telegram"
 
       # network
       # "protonvpn"
@@ -56,7 +57,6 @@
       # other
       # "appcleaner"
 			"another-redis-desktop-manager"
-			"temurin8"
 			# "font-sf-mono-nerd-font-ligaturized"
 			# "sf-symbols"
     ];

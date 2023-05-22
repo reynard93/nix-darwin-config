@@ -21,6 +21,7 @@
 		./programs/tealdeer.nix
 		./programs/zellij
 		./programs/zoxide.nix
+		./programs/atuin.nix
 		./programs/zsh.nix
 	];
 }
