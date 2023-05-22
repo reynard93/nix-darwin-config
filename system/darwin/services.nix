@@ -7,7 +7,7 @@
 		yabai = {
         enable = true;
         enableScriptingAddition = true;
-        package = yabai;
+        package = pkgs.yabai;
         config = {
           focus_follows_mouse = "autofocus";
           layout = "bsp";
