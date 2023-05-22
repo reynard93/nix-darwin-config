@@ -28,6 +28,7 @@
 	outputs = inputs @ {
 		home-manager,
 		nixpkgs,
+		lib,
 		...
 	}: {
 		darwinConfigurations = {

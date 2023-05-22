@@ -2,7 +2,6 @@
 	modules ? [],
 	inputs,
 	system,
-	lib,
 }:
 
 inputs.darwin.lib.darwinSystem {
