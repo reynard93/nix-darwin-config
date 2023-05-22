@@ -17,16 +17,16 @@
 			"chezmoi"# for my dotfiles
 			"lima"
 			# for ricing
-			{
-        name = "yabai";
-        args = [];
-        restart_service = true;
-      }
-      {
-        name = "skhd";
-        args = [];
-        restart_service = true;
-      }
+#			{
+#        name = "yabai";
+#        args = [];
+#        restart_service = true;
+#      }
+#      {
+#        name = "skhd";
+#        args = [];
+#        restart_service = true;
+#      }
       {
         name = "sketchybar";
         args = [];
@@ -67,7 +67,7 @@
       "homebrew/cask-drivers"
       "homebrew/core"
       "homebrew/services"
-      "koekeishiya/formulae"
+#      "koekeishiya/formulae"
     ];
   };
 }
