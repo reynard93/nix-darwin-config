@@ -37,7 +37,14 @@ inputs.darwin.lib.darwinSystem {
 				../../home/common
 			];
 
-			home-manager.users.reynardlee = import ../../home/reynardlee;
+			home-manager.users.reynardlee = lib.mkMerge [
+				(../../home/reynardlee)
+				{
+					imports = [
+						./yabai.nix
+					];
+				}
+			];
 		}
 
 		{

@@ -61,7 +61,6 @@
 			# "sf-symbols"
     ];
     taps = [
-      "d12frosted/emacs-plus"
       "homebrew/bundle"
       "homebrew/cask"
       "homebrew/cask"
