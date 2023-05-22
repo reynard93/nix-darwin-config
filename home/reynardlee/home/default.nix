@@ -52,7 +52,8 @@
 			ll = "ls -l";
 			lla = "ls -al";
 			tree = "ls --tree";
-			ownsh= "cd /Users/reynardlee/bin";
+			ownsh = "cd /Users/reynardlee/bin";
+			lg = "lazygit";
 			gcm = "git commit -m";
 			ga = "git add .";
 		};
