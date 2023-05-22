@@ -1,14 +1,14 @@
 {
 	pkgs,
 	...
-}: {
-	services = {
+}:
 		let yabai = pkgs.yabai.overrideAttrs (old: rec {
 			src = builtins.fetchTarball {
 			url = https://github.com/koekeishiya/yabai/releases/download/v5.0.5/yabai-v5.0.5.tar.gz;
 			sha256 = "";
 		 };
-		})
+		}); in {
+	services = {
 		nix-daemon.enable = true;
 		yabai = {
         enable = true;
