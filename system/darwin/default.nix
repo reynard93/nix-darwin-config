@@ -7,7 +7,6 @@
 inputs.darwin.lib.darwinSystem {
 	inherit system;
 
-	lib = inputs.nixpkgs.lib;
 	pkgs = inputs.nixpkgs.legacyPackages.${system};
 
 	specialArgs = {
@@ -38,7 +37,7 @@ inputs.darwin.lib.darwinSystem {
 				../../home/common
 			];
 
-			home-manager.users.reynardlee = lib.mkMerge [
+			home-manager.users.reynardlee = inputs.nixpkgs.lib.mkMerge [
 				(../../home/reynardlee)
 				{
 					imports = [
