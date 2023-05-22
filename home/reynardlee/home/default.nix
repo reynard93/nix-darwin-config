@@ -25,6 +25,11 @@
 			ripgrep
 			sd
 			tokei
+			nurl
+
+			# Rust
+			rust-analyzer
+			rustup
 
 			nodePackages.graphite-cli
 		] ++ (if !enableGUI then [] else with pkgs; [
