@@ -19,6 +19,7 @@ inputs.darwin.lib.darwinSystem {
 		./environment.nix
 		./fonts.nix
 		./system.nix
+		./homebrew.nix
 
 		./scripts/aliasApplications.nix
 		./users/reynardlee.nix
