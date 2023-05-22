@@ -7,6 +7,7 @@
 inputs.darwin.lib.darwinSystem {
 	inherit system;
 
+	lib = inputs.nixpkgs.lib;
 	pkgs = inputs.nixpkgs.legacyPackages.${system};
 
 	specialArgs = {
