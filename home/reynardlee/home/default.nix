@@ -28,7 +28,6 @@
 			nurl
 
 			# Rust
-			rust-analyzer
 			rustup
 
 			nodePackages.graphite-cli
