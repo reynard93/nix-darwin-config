@@ -15,6 +15,7 @@
 			cachix
 			nushell
 			nix-prefetch
+			skhd
 		];
 	};
 }

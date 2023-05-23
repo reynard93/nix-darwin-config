@@ -22,11 +22,11 @@
 #        args = [];
 #        restart_service = true;
 #      }
-#      {
-#        name = "skhd";
-#        args = [];
-#        restart_service = true;
-#      }
+      # {
+      #   name = "skhd";
+      #   args = [];
+      #   restart_service = true;
+      # }
       {
         name = "sketchybar";
         args = [];
