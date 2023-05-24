@@ -15,7 +15,8 @@
 		packages = with pkgs; [
 			inputs.devenv.packages.${system}.devenv
 
-			docker
+			# warning the docker here is interfering with docker-desktop alrdy installed maybe
+			# docker
 			du-dust
 			fd
 			jless
