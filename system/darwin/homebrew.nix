@@ -55,11 +55,13 @@
 			"another-redis-desktop-manager"
 			# "font-sf-mono-nerd-font-ligaturized"
 			# "sf-symbols"
+			"temurin"
+			"temurin8"
     ];
     taps = [
       "homebrew/bundle"
       "homebrew/cask"
-      "homebrew/cask"
+      "homebrew/cask-versions"
       "homebrew/cask-drivers"
       "homebrew/core"
       "homebrew/services"
