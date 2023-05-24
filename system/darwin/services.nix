@@ -11,7 +11,7 @@
 	services = {
 		nix-daemon.enable = true;
 		yabai = {
-        enable = true;
+        enable = false;
         enableScriptingAddition = true;
         package = yabai;
         config = {
@@ -37,7 +37,7 @@
         };
       };
 		skhd = {
-				enable = true;
+				enable = false;
 				# https://github.com/koekeishiya/skhd/blob/master/examples/skhdrc
 				# https://github.com/koekeishiya/skhd/issues/1
 				skhdConfig = ''

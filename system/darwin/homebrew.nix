@@ -27,11 +27,7 @@
       #   args = [];
       #   restart_service = true;
       # }
-      {
-        name = "sketchybar";
-        args = [];
-        restart_service = true;
-      }
+			"maven"
     ];
     # i don't know why this doesnt work
     casks = [
