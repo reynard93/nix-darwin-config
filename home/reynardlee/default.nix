@@ -11,9 +11,7 @@
 		./programs/direnv.nix
 		./programs/gh.nix
 		./programs/git.nix
-		./programs/helix.nix
 		./programs/lsd.nix
-		./programs/neovim.nix
 		./programs/nix-index.nix
 		./programs/nushell
 		./programs/skim.nix

@@ -4,7 +4,7 @@
 		enableGitCredentialHelper = true;
 
 		settings = {
-			editor = "${pkgs.helix}/bin/hx";
+			editor = "${pkgs.helix}/bin/neovim";
 
 			git_protocol = "ssh";
 
