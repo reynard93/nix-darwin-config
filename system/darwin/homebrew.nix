@@ -23,10 +23,10 @@
 			"pandoc" # emacs pdf tools
 			# for ricing
 		  {
-      name = "yabai";
-       args = [];
-       restart_service = true;
-     },
+        name = "yabai";
+        args = [];
+        restart_service = true;
+      }
       {
         name = "skhd";
         args = [];
