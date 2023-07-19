@@ -6,6 +6,9 @@
     enable = true;
     onActivation.autoUpdate = true;
     onActivation.cleanup = "none"; # uninstall removes manually install brews and casks
+    masApps = {
+      "Captee" = 2143880842
+    }
     brews = [
       "llvm"
       "rustup-init"
@@ -21,19 +24,7 @@
 			"automake" # emacs pdf tools
 			"poppler" # emacs pdf tools
 			"pandoc" # emacs pdf tools
-			# start ricing
-		  {
-        name = "yabai";
-        args = [];
-        restart_service = true;
-      }
-      {
-        name = "skhd";
-        args = [];
-        restart_service = true;
-      }
       "sketchybar"
-      # end ricing
 			"maven"
     ];
     # i don't know why this doesnt work
