@@ -15,7 +15,6 @@
 		./programs/nix-index.nix
 		./programs/nushell
 		./programs/skim.nix
-		./programs/starship.nix
 		./programs/tealdeer.nix
 		./programs/zellij
 		./programs/zoxide.nix

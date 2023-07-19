@@ -21,7 +21,7 @@
 			"automake" # emacs pdf tools
 			"poppler" # emacs pdf tools
 			"pandoc" # emacs pdf tools
-			# for ricing
+			# start ricing
 		  {
         name = "yabai";
         args = [];
@@ -32,6 +32,8 @@
         args = [];
         restart_service = true;
       }
+      "sketchybar"
+      # end ricing
 			"maven"
     ];
     # i don't know why this doesnt work
@@ -57,10 +59,16 @@
 
       # other
       # "appcleaner"
-			# "font-sf-mono-nerd-font-ligaturized"
 			# "sf-symbols"
 			"temurin"
 			"temurin8"
+
+      # fonts
+      "font-hack-nerd-font"
+      "font-jetbrains-mono"
+			"font-sf-mono-nerd-font-ligaturized"
+      "sf-symbols" #required by sketchybar
+
     ];
     taps = [
       "homebrew/bundle"
@@ -69,7 +77,8 @@
       "homebrew/cask-drivers"
       "homebrew/core"
       "homebrew/services"
-#      "koekeishiya/formulae"
+      "koekeishiya/formulae"
+      "FelixKratz/formulae"
     ];
   };
 }

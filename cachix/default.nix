@@ -1,6 +1,5 @@
 {
 	imports = [
-		./colton.nix
 		./devenv.nix
 		./nix-community.nix
 		./pre-commit-hooks.nix
