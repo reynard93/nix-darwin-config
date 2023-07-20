@@ -1,8 +1,4 @@
-{ inputs, ... }:
-let
-  folder = "${inputs.sketchybar}/config/sketchybar";
-in
-{
+{ config, pkgs, lib, ... }:{
   home.file.sketchybar = {
     executable = true;
     target = ".config/sketchybar/sketchybarrc";

@@ -5,7 +5,7 @@
  homebrew = {
     enable = true;
     onActivation.autoUpdate = true;
-    onActivation.cleanup = "none"; # uninstall removes manually install brews and casks
+    onActivation.cleanup = "zap"; # uninstall removes manually install brews and casks
     brews = [
       "neovim"
       "llvm"
@@ -28,16 +28,8 @@
       #   args = ["with-dragon-icon"];
       #   link = true;
       # }
-      {
-        name = "yabai";
-        args = [];
-        restart_service = true;
-      }
-      {
-        name = "skhd";
-        args = [];
-        restart_service = true;
-      }
+      "yabai"
+      "skhd"
       "sketchybar"
 			"maven"
     ];
