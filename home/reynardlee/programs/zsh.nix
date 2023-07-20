@@ -4,9 +4,10 @@
 		enableAutosuggestions = true;
 		enableSyntaxHighlighting = true;
 
+    # can put shell env here
     initExtraFirst="
 
-    "
+    ";
 		autocd = false;
     loginShellInit = ''
       if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
