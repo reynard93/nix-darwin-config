@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{
   home.file.yabai = {
     executable = true;
     target = ".config/yabai/yabairc";

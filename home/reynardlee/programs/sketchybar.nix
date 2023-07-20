@@ -1,6 +1,5 @@
-{ config, pkgs, lib, ... }:
 let
-  folder = "../../configs/sketchybar";
+  folder = "../../../configs/sketchybar";
 in
 {
   home.file.sketchybar = {
