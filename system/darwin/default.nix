@@ -1,13 +1,11 @@
 {
 	modules ? [],
 	inputs,
-	system,
-	home
+	system
 }:
 
 inputs.darwin.lib.darwinSystem {
 	inherit system;
-	inherit home;
 
 	pkgs = inputs.nixpkgs.legacyPackages.${system};
 
