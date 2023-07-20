@@ -19,8 +19,9 @@ inputs.darwin.lib.darwinSystem {
 		./environment.nix
 		./fonts.nix
 		./system.nix
-		./services.nix
 		./homebrew.nix
+		'./yabai.nix'
+		'./sketchybar.nix'
 
 		./scripts/aliasApplications.nix
 		./users/reynardlee.nix
@@ -56,16 +57,6 @@ inputs.darwin.lib.darwinSystem {
 			};
 
 			programs.bash.enable = true;
-			programs.zsh = {
-				enable = true;
-
-				# for some reason, i'm not getting this in my shell init.
-				loginShellInit = ''
-					if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
-						. '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-					fi
-				'';
-			};
 
 			security.pam.enableSudoTouchIdAuth = true;
 		}

@@ -6,24 +6,38 @@
     enable = true;
     onActivation.autoUpdate = true;
     onActivation.cleanup = "none"; # uninstall removes manually install brews and casks
-    masApps = {
-      "Captee" = 2143880842
-    }
     brews = [
+      "neovim"
       "llvm"
       "rustup-init"
-      "marksman"
       "fzf"
       "atuin"
       "git-delta"
 			"lima"
 			"efm-langserver"
+      "yaml-language-server"
 			# "findutils" # for locate to work, note commands are glocate and gupdatedb
 			"enchant"# emacs jinx
 			"deno"# emacs lsp
 			"automake" # emacs pdf tools
 			"poppler" # emacs pdf tools
 			"pandoc" # emacs pdf tools
+
+      # {
+      #   name = "emacs-plus@30";
+      #   args = ["with-dragon-icon"];
+      #   link = true;
+      # }
+      {
+        name = "yabai";
+        args = [];
+        restart_service = true;
+      }
+      {
+        name = "skhd";
+        args = [];
+        restart_service = true;
+
       "sketchybar"
 			"maven"
     ];
@@ -57,7 +71,6 @@
       # fonts
       "font-hack-nerd-font"
       "font-jetbrains-mono"
-			"font-sf-mono-nerd-font-ligaturized"
       "sf-symbols" #required by sketchybar
 
     ];
