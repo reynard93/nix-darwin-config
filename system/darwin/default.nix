@@ -20,8 +20,8 @@ inputs.darwin.lib.darwinSystem {
 		./fonts.nix
 		./system.nix
 		./homebrew.nix
-		'./yabai.nix'
-		'./sketchybar.nix'
+		./yabai.nix
+		./sketchybar.nix
 
 		./scripts/aliasApplications.nix
 		./users/reynardlee.nix

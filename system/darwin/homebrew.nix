@@ -64,7 +64,6 @@
 
       # other
       # "appcleaner"
-			# "sf-symbols"
 			"temurin"
 			"temurin8"
 
