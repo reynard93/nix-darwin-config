@@ -37,7 +37,7 @@
         name = "skhd";
         args = [];
         restart_service = true;
-
+      }
       "sketchybar"
 			"maven"
     ];
