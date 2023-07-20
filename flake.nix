@@ -33,6 +33,7 @@
 		darwinConfigurations = {
 			r-lee-QH0KG = import ./system/darwin {
 				inherit inputs;
+				inherit home;
 
 				system = "aarch64-darwin";
 
