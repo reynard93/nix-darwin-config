@@ -1,4 +1,8 @@
-{ config, pkgs, lib, ... }:{
+{ config, pkgs, lib, ... }:
+let
+  folder = "../../configs/sketchybar";
+in
+{
   home.file.sketchybar = {
     executable = true;
     target = ".config/sketchybar/sketchybarrc";
