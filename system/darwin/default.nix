@@ -30,7 +30,7 @@ inputs.darwin.lib.darwinSystem {
 		inputs.home-manager.darwinModules.home-manager
 		{
 			home-manager.extraSpecialArgs = {
-				inherit inputs system home;
+				inherit inputs system;
 
 				enableGUI = true;
 			};
