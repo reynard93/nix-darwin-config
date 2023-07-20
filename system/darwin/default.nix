@@ -6,6 +6,7 @@
 
 inputs.darwin.lib.darwinSystem {
 	inherit system;
+	inherit (inputs@) home;
 
 	pkgs = inputs.nixpkgs.legacyPackages.${system};
 
