@@ -1,13 +1,11 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
 	programs.zsh = {
 		enable = true;
 		enableAutosuggestions = true;
 		enableSyntaxHighlighting = true;
 
     # can put shell env here
-    initExtraFirst="
-
-    ";
+    #initExtraFirst="";
 		autocd = false;
     loginShellInit = ''
       if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
@@ -38,7 +36,7 @@
 					rev = "v0.5.0";
 					sha256 = "0za4aiwwrlawnia4f29msk822rj9bgcygw6a8a6iikiwzjjz0g91";
 				};
-			},
+			}
       {
         name = "zsh-autosuggestions";
         src = pkgs.fetchFromGitHub {
