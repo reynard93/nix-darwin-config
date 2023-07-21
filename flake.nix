@@ -19,6 +19,7 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		# Other sources
 		mkAlias = {
 			url = "github:reckenrode/mkAlias";
 			inputs.nixpkgs.follows = "nixpkgs";

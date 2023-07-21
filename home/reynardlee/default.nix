@@ -20,8 +20,6 @@
 		./programs/zoxide.nix
 		./programs/atuin.nix
 		./programs/zsh.nix
-		./programs/sketchybar.nix
 		./programs/yabai.nix
-		./programs/emacs.nix
 	];
 }

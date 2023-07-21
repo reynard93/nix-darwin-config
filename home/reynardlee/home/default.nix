@@ -35,7 +35,6 @@
 		] ++ (if !enableGUI then [] else with pkgs; [
 			discord
 			element-desktop
-			telegram
 		]);
 
 		sessionPath = [

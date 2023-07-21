@@ -2,8 +2,6 @@
 	modules ? [],
 	inputs,
 	system,
-	pkgs,
-	fetchpatch
 }:
 
 inputs.darwin.lib.darwinSystem {
@@ -61,6 +59,7 @@ inputs.darwin.lib.darwinSystem {
 			security.pam.enableSudoTouchIdAuth = true;
 			services.skhd.enable = true;
 			services.yabai.enable = true;
+			services.emacs.enable = true;
 		}
 	];
 }
