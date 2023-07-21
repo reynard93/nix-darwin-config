@@ -26,11 +26,11 @@
 
       "ripgrep" # emacs dep, faster grep
 
-      # {
-      #   name = "emacs-plus@30";
-      #   args = ["with-dragon-icon"];
-      #   link = true;
-      # }
+      {
+        name = "emacs-plus@30";
+        args = ["with-dragon-icon"];
+        link = true;
+      }
       "yabai"
       "skhd"
       "sketchybar"
@@ -44,6 +44,8 @@
     casks = [
       # multimedia
       # "spotify"
+      "vlc"
+      "warp"
       # extra browsers
       "firefox"
 			"temurin"
@@ -52,7 +54,6 @@
       # fonts
       "font-hack-nerd-font" # required for sketchybar?
       "font-jetbrains-mono"
-      "font-fantasque-sans-mono"
       "sf-symbols" #required by sketchybar
     ];
     taps = [

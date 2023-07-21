@@ -1589,4 +1589,4 @@ bindkey '^[[1;5D' end-of-line                   # End (fn+right) : move cursor t
 bindkey '^H'      backward-kill-word            # ctrl+backspace : delete previous word
 bindkey '^[[3;5~' kill-word                     # ctrl+del       : delete next word
 
-zsh --info-right | source /dev/stdin
+##zsh --info-right | source /dev/stdin

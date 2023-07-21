@@ -6,6 +6,7 @@
       #!/usr/bin/env sh
 
       # load scripting addition
+      sudo nvram boot-args=-arm64e_prev
       sudo yabai --load-sa
       yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
@@ -15,7 +16,7 @@
 
       # borders
       yabai -m config window_border on
-      yabai -m config window_border_width 2
+      yabai -m config window_border_width 4
       yabai -m config window_border_radius 0
       yabai -m config window_border_blur off
       yabai -m config active_window_border_color 0xFF40FF00
@@ -52,8 +53,8 @@
       yabai -m space 10 --label ten
 
       # assign apps to spaces
-      yabai -m rule --add app="Alacritty" space=code
-      yabai -m rule --add app="Visual Studio Code" space=code
+      yabai -m rule --add app="Wezterm" space=code
+      yabai -m rule --add app="IntelliJ IDEA" space=code
 
       yabai -m rule --add app="Vivaldi" space=www
 
@@ -68,8 +69,6 @@
 
       yabai -m rule --add app="Google Chrome" space=eight
 
-      yabai -m rule --add app="Microsoft Teams" space=nine
-
       echo "yabai configuration loaded.."
     '';
   };
@@ -81,14 +80,10 @@
         # alt + a / u / o / s are blocked due to umlaute
 
         # workspaces
-        ctrl + alt - j : ${yabai} -m space --focus prev
-        ctrl + alt - k : ${yabai} -m space --focus next
         cmd + alt - j : ${yabai} -m space --focus prev
         cmd + alt - k : ${yabai} -m space --focus next
 
         # send window to space and follow focus
-        ctrl + alt - l : ${yabai} -m window --space prev; ${yabai} -m space --focus prev
-        ctrl + alt - h : ${yabai} -m window --space next; ${yabai} -m space --focus next
         cmd + alt - l : ${yabai} -m window --space prev; ${yabai} -m space --focus prev
         cmd + alt - h : ${yabai} -m window --space next; ${yabai} -m space --focus next
 
@@ -124,7 +119,7 @@
                   ${yabai} -m window --toggle pip
 
         # reload
-        shift + alt - r : brew services restart skhd; brew services restart yabai; brew services restart sketchybar
+        shift + alt - r : skhd --restart-service; yabai --restart-service restart yabai; sketchybar --restart-service
       '';
   };
 }
