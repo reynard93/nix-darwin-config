@@ -64,7 +64,6 @@
       "homebrew/services"
       "koekeishiya/formulae"
       "FelixKratz/formulae"
-      "wez/wezterm/wezterm-nightly"
     ];
   };
 }
