@@ -19,9 +19,12 @@
 			# "findutils" # for locate to work, note commands are glocate and gupdatedb
 			"enchant"# emacs jinx
 			"deno"# emacs lsp
+      "pyenv"
 			"automake" # emacs pdf tools
 			"poppler" # emacs pdf tools
 			"pandoc" # emacs pdf tools
+
+      "ripgrep" # emacs dep, faster grep
 
       # {
       #   name = "emacs-plus@30";
@@ -31,39 +34,26 @@
       "yabai"
       "skhd"
       "sketchybar"
+
 			"maven"
+      "lf" # file mgr
+      "fd"# better find
+      "chezmoi" # manage dots
     ];
     # i don't know why this doesnt work
     casks = [
       # multimedia
       # "spotify"
-      "vlc"
-
       # extra browsers
       "firefox"
-      # "tor-browser"
-
-      # social
-			# "telegram"
-
-      # network
-      # "protonvpn"
-      # "transmission"
-
-      # system tweaks
-      # "karabiner-elements"
-      # "flameshot"
-
-      # other
-      # "appcleaner"
 			"temurin"
 			"temurin8"
 
       # fonts
-      "font-hack-nerd-font"
+      "font-hack-nerd-font" # required for sketchybar?
       "font-jetbrains-mono"
+      "font-fantasque-sans-mono"
       "sf-symbols" #required by sketchybar
-
     ];
     taps = [
       "homebrew/bundle"
@@ -74,6 +64,7 @@
       "homebrew/services"
       "koekeishiya/formulae"
       "FelixKratz/formulae"
+      "wez/wezterm/wezterm-nightly"
     ];
   };
 }
