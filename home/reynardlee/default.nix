@@ -1,3 +1,4 @@
+{my-emacs, ...}: # add my-emacs
 {
 	imports = [
 		./editorconfig.nix

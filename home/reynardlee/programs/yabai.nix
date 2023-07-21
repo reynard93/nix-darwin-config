@@ -101,6 +101,12 @@
         shift + alt - k : ${yabai} -m window --swap north
         shift + alt - l : ${yabai} -m window --swap east
 
+        # Make window zoom to fullscreen: shift + alt - f
+        shift + alt - f : yabai -m window --toggle zoom-fullscreen; sketchybar --trigger window_focus
+
+        # Make window zoom to parent node: alt - f
+        alt - f : yabai -m window --toggle zoom-parent; sketchybar --trigger window_focus
+
         # increase window size
         shift + alt - a : ${yabai} -m window --resize left:-20:0
         shift + alt - s : ${yabai} -m window --resize right:-20:0

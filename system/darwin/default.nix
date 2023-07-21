@@ -1,7 +1,9 @@
 {
 	modules ? [],
 	inputs,
-	system
+	system,
+	pkgs,
+	fetchpatch
 }:
 
 inputs.darwin.lib.darwinSystem {
@@ -20,6 +22,7 @@ inputs.darwin.lib.darwinSystem {
 		./fonts.nix
 		./system.nix
 		./homebrew.nix
+		./emacs.nix
 
 		./scripts/aliasApplications.nix
 		./users/reynardlee.nix

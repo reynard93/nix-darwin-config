@@ -3,6 +3,7 @@
 	inputs,
 	pkgs,
 	system,
+	my-emacs,
 	...
 }: {
 	home = {
@@ -35,7 +36,7 @@
 		] ++ (if !enableGUI then [] else with pkgs; [
 			discord
 			element-desktop
-#			telegram
+			telegram
 		]);
 
 		sessionPath = [
@@ -61,6 +62,7 @@
 			lg = "lazygit";
 			gcm = "git commit -m";
 			ga = "git add .";
+			emacs = "~/Applications/Emacs.app/Contents/MacOS/Emacs";
 		};
 	};
 }
