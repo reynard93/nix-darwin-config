@@ -1,4 +1,3 @@
-
 { pkgs, fetchpatch, ... }: # You may have other arguments here
 {
   programs.emacs = pkgs.emacsWithPackagesFromUsePackage {
@@ -17,6 +16,6 @@
         })
       else pkgs.emacsPgtk;
     alwaysEnsure = true;
-    extraEmacsPackages = epkgs: [ epkgs.use-package ];
+    #extraEmacsPackages = epkgs: [ epkgs.use-package ];
   };
 }
