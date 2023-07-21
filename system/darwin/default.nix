@@ -22,7 +22,6 @@ inputs.darwin.lib.darwinSystem {
 		./fonts.nix
 		./system.nix
 		./homebrew.nix
-		./emacs.nix
 
 		./scripts/aliasApplications.nix
 		./users/reynardlee.nix
@@ -31,7 +30,7 @@ inputs.darwin.lib.darwinSystem {
 		inputs.home-manager.darwinModules.home-manager
 		{
 			home-manager.extraSpecialArgs = {
-				inherit inputs system pkgs;
+				inherit inputs system;
 
 				enableGUI = true;
 			};

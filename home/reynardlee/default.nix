@@ -22,5 +22,6 @@
 		./programs/zsh.nix
 		./programs/sketchybar.nix
 		./programs/yabai.nix
+		./programs/emacs.nix
 	];
 }
