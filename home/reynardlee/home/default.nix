@@ -3,7 +3,6 @@
 	inputs,
 	pkgs,
 	system,
-	my-emacs,
 	...
 }: {
 	home = {
