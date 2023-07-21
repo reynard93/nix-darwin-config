@@ -59,7 +59,6 @@ inputs.darwin.lib.darwinSystem {
 			security.pam.enableSudoTouchIdAuth = true;
 			services.skhd.enable = true;
 			services.yabai.enable = true;
-			services.sketchybar.enable = true;
 		}
 	];
 }

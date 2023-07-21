@@ -8,6 +8,7 @@
     onActivation.cleanup = "zap"; # uninstall removes manually install brews and casks
     brews = [
       "neovim"
+      "lazygit"
       "llvm"
       "rustup-init"
       "fzf"
