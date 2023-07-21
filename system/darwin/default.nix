@@ -57,6 +57,8 @@ inputs.darwin.lib.darwinSystem {
 			programs.bash.enable = true;
 			services.nix-daemon.enable = true;
 			security.pam.enableSudoTouchIdAuth = true;
+			services.skhd.enable = true;
+			services.yabai.enable = true;
 		}
 	];
 }
