@@ -11,13 +11,13 @@
       yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
       # bar configuration
-      yabai -m config external_bar all:0:39
+      yabai -m config external_bar all:0:0
       yabai -m signal --add event=window_focused action="sketchybar --trigger window_focus"
 
       # borders
       yabai -m config window_border on
-      yabai -m config window_border_width 4
-      yabai -m config window_border_radius 0
+      yabai -m config window_border_width 2
+      yabai -m config window_border_radius 4
       yabai -m config window_border_blur off
       yabai -m config active_window_border_color 0xFF40FF00
       yabai -m config normal_window_border_color 0x00FFFFFF

@@ -24,17 +24,17 @@
 			"automake" # emacs pdf tools
 			"poppler" # emacs pdf tools
 			"pandoc" # emacs pdf tools
+      "cmake" # emacs vterm
+      "ispell" # another emacs dep
+      "hunspell" # roy emacs require
+      "fd" # emacs faster fd, havent configure yet set-find-program?
+      "exa" # required for dirvish
+      "sbcl" # required for sly, rmbr to customize-set-variable 'inferior-lisp-program
 
       "ripgrep" # emacs dep, faster grep
 
-      {
-        name = "emacs-plus@30";
-        args = ["with-dragon-icon"];
-        link = true;
-      }
       "yabai"
       "skhd"
-      "sketchybar"
 
 			"maven"
       "lf" # file mgr
@@ -45,7 +45,6 @@
     casks = [
       # multimedia
       # "spotify"
-      "vlc"
       "warp"
       # extra browsers
       "firefox"

@@ -60,7 +60,6 @@
 			lg = "lazygit";
 			gcm = "git commit -m";
 			ga = "git add .";
-			emacs = "~/Applications/Emacs.app/Contents/MacOS/Emacs";
 		};
 	};
 }
